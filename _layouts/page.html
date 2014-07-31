@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+  	[{{ page.author }}@blog ~/{{ page.date | date: "%Y-%m-%d" }}]$ {{ page.command }}
+  </header>
+
+  <article class="post-content">
+  {{ content }}
+  </article>
+</div>

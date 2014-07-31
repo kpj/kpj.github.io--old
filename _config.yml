@@ -1,0 +1,22 @@
+# Site settings
+title: kpj's blog
+email: kpjkpjkpjkpjkpjkpj@gmail.com
+description: "foo"
+baseurl: ""
+url: "http://kpj.github.io/"
+twitter_username: kpjkpj
+github_username:  kpj
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude: ["README.md"]
+highlighter: true
+
+# Default values
+defaults:
+  -
+    scope:
+        path: ""
+    values:
+        author: "kpj"
