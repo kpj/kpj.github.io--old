@@ -9,7 +9,7 @@ There was something.
 
 ### The Code
 
-{% highlight python %}
+{% highlight python linenos %}
 def foo():
 	bar = [chr(i) for i in [89, 77, 67, 65]]
 	return ''.join(bar)
