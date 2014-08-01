@@ -11,7 +11,7 @@ github_username:  kpj
 markdown: kramdown
 permalink: pretty
 exclude: ["README.md"]
-highlighter: true
+highlighter: pygments
 
 # Default values
 defaults:

@@ -18,9 +18,18 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
-a         { color: #2a7ae2; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
-a:visited { color: #205caa; }
+a { 
+  color: white; 
+  text-decoration: none; 
+}
+a:hover { 
+  background-color: white; 
+  color: black;
+  text-decoration: underline; 
+}
+/*a:visited { 
+  color: #eeeeee;
+}*/
 
 /* Utility */
 
@@ -49,8 +58,7 @@ a:visited { color: #205caa; }
 
 .site-title,
 .site-title:hover,
-.site-title:visited,
-.site-title a {
+.site-title:visited {
   display: block;
   color: white;
   font-size: 23px;
@@ -241,13 +249,14 @@ a:visited { color: #205caa; }
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
-  background-color: #eef;
+  background-color: #333333;
   padding: 8px 12px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   font-size: 15px;
-  overflow:scroll;
+  overflow: none;
+  color: #A6A6A6;
 }
 
 .post code { padding: 1px 5px; }

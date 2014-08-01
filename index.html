@@ -13,8 +13,7 @@ layout: default
         <h5 class="date">[{{ page.author }}@blog ~/]$ ls -l {{ post.date | date: "%Y-%m" }}</h5>
       {% endif %}
 
-      -rw-r--r-- 1 kpj users {{ post.date | date: "%B %-d" }} 
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <a href="{{ post.url | prepend: site.baseurl }}">-rw-r--r-- 1 kpj users {{ post.date | date: "%B %-d" }} {{ post.title }}</a>
       <br>
     {% endfor %}
   </ul>
