@@ -49,15 +49,17 @@ a:visited { color: #205caa; }
 
 .site-title,
 .site-title:hover,
-.site-title:visited {
+.site-title:visited,
+.site-title a {
   display: block;
-  color: #333;
-  font-size: 26px;
+  color: white;
+  font-size: 23px;
   letter-spacing: -1px;
   float: left;
-  line-height: 56px;
+  line-height: 42px;
   position: relative;
   z-index: 1;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .site-nav {
