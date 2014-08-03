@@ -24,3 +24,10 @@ def foo():
 
 > YOUNG MAN
 > something something your shoes
+
+{% highlight python linenos %}
+def baz():
+	"""This is a veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery loooooooooooooooooooooonooooooooooooog comment.
+	"""
+	return 'qux'
+{% endhighlight %}

@@ -271,7 +271,7 @@ a:hover > span#post_title {
   border-radius: 3px;
   background-color: #080808;
   font-size: 15px;
-  overflow: none;
+  overflow: auto;
   color: #A6A6A6;
 }
 
