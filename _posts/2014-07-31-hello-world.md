@@ -3,8 +3,8 @@ layout: post
 title:  "Hello World"
 ---
 
-A long time ago on a website far, far away....
-----------------------------------------------
+A long time ago on a website far, far away...
+---------------------------------------------
 This is just a test page to demonstrate some fancy features.
 
 ### The Code
