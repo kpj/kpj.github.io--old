@@ -20,3 +20,6 @@ defaults:
         path: ""
     values:
         author: "kpj"
+
+# helpful stuff
+indent: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
