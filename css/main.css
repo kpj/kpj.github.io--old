@@ -258,6 +258,10 @@ a:hover > span#post_title {
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
+.post-content a {
+  text-decoration: underline;
+}
+
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
