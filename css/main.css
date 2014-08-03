@@ -35,6 +35,14 @@ a:hover {
   color: #eeeeee;
 }*/
 
+span#post_title {
+  color: #66C2FF;
+}
+
+a:hover > span#post_title {
+  color: #336180;
+}
+
 /* Utility */
 
 .wrap:before,
