@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Hello Village"
+title:  "Hello World"
 ---
 
 A long time ago on a website far, far away....
 ----------------------------------------------
-There was something.
+This is just a test page to demonstrate some fancy features.
 
 ### The Code
 
