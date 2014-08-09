@@ -25,9 +25,13 @@ def foo():
 > YOUNG MAN
 > something something your shoes
 
+### Conclusion
+
 {% highlight python linenos %}
 def baz():
 	"""This is a veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery loooooooooooooooooooooonooooooooooooog comment.
 	"""
 	return 'qux'
 {% endhighlight %}
+
+<hidden-img src="/assets/images/cat.jpg" />

@@ -219,6 +219,25 @@ a:hover > span#post_title {
 .post-content > * { margin: 20px 0; }
 
 
+.post-content img {
+  width: 100%;
+  border: 1px solid #d5d5e9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.post-content button {
+  color: #FFFFFF;
+  background-color: #1F1F1F;
+  border: 1px solid #d5d5e9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
 .post-content h1,
 .post-content h2,
 .post-content h3,
