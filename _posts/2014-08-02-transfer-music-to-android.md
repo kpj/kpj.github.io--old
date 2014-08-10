@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Transfer Music to Android Phone"
+categories: ["tutorial", "android"]
 ---
 
 When MTP doesn't work

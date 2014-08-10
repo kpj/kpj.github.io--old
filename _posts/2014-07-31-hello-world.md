@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hello World"
+categories: ["test"]
 ---
 
 A long time ago on a website far, far away...
