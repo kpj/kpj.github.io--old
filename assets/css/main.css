@@ -236,6 +236,7 @@ a:hover > span#post_title {
   border-radius: 3px;
   padding-left: 2px;
   padding-right: 2px;
+  margin: 0 0 0 0;
 }
 
 .post-content h1,

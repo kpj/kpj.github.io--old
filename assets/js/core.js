@@ -1,22 +1,29 @@
 window.onload = function() {
-    var himgs = document.getElementsByTagName('hidden-img');
-
-    for(var p in himgs) {
-        var himg = himgs[p];
-        if(typeof himg.parentNode === 'undefined')
-            continue;
-
-        var butt = document.createElement('button');
-        $(butt)
-            .attr('type', 'button')
-            .data('src', $(himg).attr('src'))
-            .text('Show Image')
-            .on('click', function() {
-                var img = document.createElement('img');
-                img.src = $(this).data('src');
-                $(this).replaceWith($(img));
-            });
-
-        himg.parentNode.replaceChild(butt, himg);
-    }
+    $('hidden-img').each(function(i, himg) {
+        $(himg).replaceWith(function() {
+            var butt = document.createElement('button');
+            $(butt)
+                .attr('type', 'button')
+                .data('src', $(himg).attr('src'))
+                .text('Show Image')
+                .on('click', function() {
+                    $(this).hide();       
+                    var old = $('#hidden-image-' + i);
+                    if(old.length > 0) {
+                        old.show();
+                    } else {
+                        var img = document.createElement('img');
+                        $(img)
+                            .attr('src', $(this).data('src'))
+                            .attr('id', 'hidden-image-' + i)
+                            .on('click', function() {
+                                $(this).hide();
+                                $(butt).show();
+                            });
+                        $(img).insertAfter($(this));
+                    }
+                });
+            return butt;
+        });
+    });
 }

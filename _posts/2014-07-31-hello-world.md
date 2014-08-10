@@ -35,4 +35,8 @@ def baz():
 	return 'qux'
 {% endhighlight %}
 
-<hidden-img src="/assets/images/cat.jpg" />
+<hidden-img src="/assets/images/cat.jpg"></hidden-img>
+<hidden-img src="/assets/images/cat2.jpg"></hidden-img>
+<hidden-img src="/assets/images/cat3.jpg"></hidden-img>
+
+The End.
