@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
     $('hidden-img').each(function(i, himg) {
         $(himg).replaceWith(function() {
             var butt = document.createElement('button');
@@ -26,4 +26,4 @@ window.onload = function() {
             return butt;
         });
     });
-}
+});
