@@ -239,6 +239,11 @@ a:hover > span#post_title {
   margin: 0 0 0 0;
 }
 
+.post-content button:active {
+  background-color: #1A1A1A;
+  border-color: #808080;
+}
+
 .post-content h1,
 .post-content h2,
 .post-content h3,
