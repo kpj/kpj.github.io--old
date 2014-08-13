@@ -1,3 +1,7 @@
+/*
+ * Transform <hidden-img src="path/to/img"></hidden-img> elements to buttons
+ * which reveal the image onclick. Clicking the image returns to the button.
+ */
 function HiddenImages() {
     this.apply = function() {
         $('hidden-img').each(function(i, himg) {
