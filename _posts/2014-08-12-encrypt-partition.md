@@ -82,6 +82,7 @@ Useful information about our partitions can then be stored as follows
 {% highlight bash %}
 $ mount /dev/sdb1 /mnt/
 $ fdisk -l /dev/sdb > /mnt/partitions
+$ umount /mnt
 {% endhighlight %}
 
 
@@ -107,12 +108,6 @@ The header and keyslot area can then be backuped (assuming that the meta info pa
 
 {% highlight bash %}
 $ cryptsetup luksHeaderBackup /dev/sdb2 --header-backup-file /mnt/header
-{% endhighlight %}
-
-Let's unmount the meta partition and look at the other one
-
-{% highlight bash %}
-$ umount /mnt
 {% endhighlight %}
 
 
