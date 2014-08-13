@@ -298,6 +298,11 @@ a:hover > span#post_title {
   font-size: 15px;
   overflow: auto;
   color: #A6A6A6;
+  white-space: nowrap;
+}
+
+.post pre code {
+  white-space: pre;
 }
 
 .post code { padding: 1px 5px; }
