@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Encrypting Partitions using LUKS"
+title:  "Encrypt Partitions using LUKS"
 categories: ["tutorial", "linux"]
 ---
 
