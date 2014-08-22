@@ -116,7 +116,7 @@ Accessing the encrypted partition
 We can open our newly create drive which is backed by `/dev/sdb2` by executing
 
 {% highlight bash %}
-$ cryptsetup -v luksOpen /dev/sda1 sticky
+$ cryptsetup -v luksOpen /dev/sdb2 sticky
 Enter passphrase for /dev/sdb2: 
 Key slot 0 unlocked.
 Command successful.
@@ -162,3 +162,16 @@ Command successful.
 {% endhighlight %}
 
 Where `sticky` is simply the name of the mapping.
+
+
+Normal Workflow
+---------------
+To wrap everything up, this is the usual order of commands
+
+{% highlight bash %} 
+$ cryptsetup -v luksOpen <block device> <map name>
+$ mount /dev/mapper/<map name> <mount point>
+$ # do work...
+$ umount <mount point>
+$ cryptsetup -v luksClose <map name>
+{% endhighlight %}
