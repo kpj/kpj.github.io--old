@@ -166,7 +166,7 @@ Where `sticky` is simply the name of the mapping.
 
 Normal Workflow
 ---------------
-To wrap everything up, this is the usual order of commands
+To wrap everything up, this is the usual order of commands when using a device encrypted as described before
 
 {% highlight bash %} 
 $ cryptsetup -v luksOpen <block device> <map name>
