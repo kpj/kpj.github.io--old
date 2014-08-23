@@ -55,7 +55,7 @@ In our case, `<kernel>` would be '/boot/vmlinuz-custom' and `<image>` would be '
 Adding the boot entry
 ---------------------
 In order to actually find your custom kernel on boot, you have to tell grub about it.
-Do so by adding a new entry to `/etc/grub.d/40_custom` (or a similarly named file in that directory). You can also skip this step and let grub generate a default entry.
+Do so by adding a new entry to `/etc/grub.d/40_custom` (or a similarly named file in that directory). You can also skip this step and let grub generate a default entry by simply calling `grub-mkconfig` as shown below.
 
 In the former case, the entry should look something like
 
@@ -75,5 +75,5 @@ Consequently, '(hd0,gpt4)' would code for `sda4`.
 These changes can then be committed to `/boot/grub/grub.cfg` by running
 
 {% highlight bash %}
-grub-mkconfig -o /boot/grub/grub.cfg
+$ grub-mkconfig -o /boot/grub/grub.cfg
 {% endhighlight %}
