@@ -17,8 +17,15 @@ The used configuration can either be adapted from another distribution or genera
 $ make menuconfig
 {% endhighlight %}
 
-To make your kernel easily identifiable I'd suggest to set `CONFIG_LOCALVERSION` to something you'll recognize.
+The controls are as follows
 
+* `/`: Search for an item
+* `y`: Enable item
+* `n`: Disable item
+
+I'd suggest to alter the following parameters
+
+* `CONFIG_LOCALVERSION`: Give your kernel some name
 
 Compilation & Installation
 --------------------------
@@ -34,8 +41,9 @@ In order to be able to boot into your kernel, it has to be installed to `/boot`
 $ cp arch/x86/boot/bzImage /boot/vmlinuz-custom
 {% endhighlight %}
 
-here, `custom` can be replaced with anything you like (just remember what it is).
-Don't forget to install your modules
+You might want to replace `custom` with something you can remember more easily.
+
+Finally, don't forget to install your modules
 
 {% highlight bash %}
 $ make modules_install
@@ -55,7 +63,9 @@ In our case, `<kernel>` would be '/boot/vmlinuz-custom' and `<image>` would be '
 Adding the boot entry
 ---------------------
 In order to actually find your custom kernel on boot, you have to tell grub about it.
-Do so by adding a new entry to `/etc/grub.d/40_custom` (or a similarly named file in that directory). You can also skip this step and let grub generate a default entry by simply calling `grub-mkconfig` as shown below.
+Do so by adding a new entry to `/etc/grub.d/40_custom` (or a similarly named file in that directory).
+
+You can also skip this step and let grub generate a default entry by simply calling `grub-mkconfig` as shown below.
 
 In the former case, the entry should look something like
 
