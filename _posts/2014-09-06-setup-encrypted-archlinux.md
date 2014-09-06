@@ -138,7 +138,7 @@ Setting up a Boot Loader
 ------------------------
 We are going to use `syslinux` whose simplicity was confirmed by credible sources [citation needed].
 
-To do so, install the `syslinux` package and execute the `syslinux-install_update` script with the following parameters
+To do so, install the `syslinux` and `gptfdisk` packages and execute the `syslinux-install_update` script with the following parameters
 
 {% highlight bash %}
 $ syslinux-install_update -i -a -m
@@ -148,7 +148,7 @@ Don't forget to add the right kernel parameter to `/boot/syslinux/syslinux.cfg`.
 
 {% highlight bash %}
 LABEL arch
-	APPEND [..] cryptdevice=/dev/sda2:rootfs allow-discards
+	APPEND root=/dev/mapper/rootfs rw cryptdevice=/dev/sda2:rootfs allow-discards
 {% endhighlight %}
 
 Hereby, `allow-discards` allows to forward TRIM commands via LUKS, which is helpful for SSDs.
