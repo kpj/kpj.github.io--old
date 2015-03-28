@@ -125,7 +125,7 @@ $ arch-chroot /mnt
 Creating an Initial RAM Disk
 ----------------------------
 The only thing to notice here is that `encrypt` has to be added to the HOOKS array in `/etc/mkinitcpio.conf` before `filesystems`.
-You might also want to add `keyboard` as this will allow you to use USB keyboards in early userspace.
+You might also want to add `keyboard` (before `encrypt`) as this will allow you to use USB keyboards in early userspace.
 
 The RAM disk can then be created as follows
 
