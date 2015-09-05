@@ -56,13 +56,13 @@ This section will list a few common first steps after installing the basic syste
 
 ### Set a Hostname
 {% highlight bash %}
-$ echo -n 'foo' > /etc/hostname
+$ hostnamectl set-hostname <hostname>
 {% endhighlight %}
 
 
 ### Set your Timezone
 {% highlight bash %}
-$ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+$ timedatectl set-timezone Europe/Berlin
 {% endhighlight %}
 
 ### Set locale
