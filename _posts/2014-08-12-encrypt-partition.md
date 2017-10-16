@@ -69,7 +69,7 @@ Executing `ls /dev/sdb*` will now reveal the two new block devices `/dev/sdb1` a
 As the first one will store helpful information it is formatted to ext4 using 'mke2fs' (`-L` will set the volume label).
 
 {% highlight bash %}
-$ mke2fs -L sticky-hint -t ext4 dev/sdb1
+$ mke2fs -L sticky-hint -t ext4 /dev/sdb1
 Creating filesystem with 5120 1k blocks and 1280 inodes
 
 Allocating group tables: done                            
