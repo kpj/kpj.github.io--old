@@ -49,8 +49,11 @@ Plots to stdout can be done by using the [txtplot](http://cran.r-project.org/web
 {% endhighlight %}
 
 
-Proper Plots with ggplot2
+Proper plots with ggplot2
 -------------------------
+It is of course possible to simply use `ggsave` in order to save your plots.
+However, in order to have a more elaborate preview, follow the next few steps.
+
 In order to get proper plots with `ggplot2` you have to set up an X server first. This can be done by installing an android app like e.g. [XServer XSDL](https://play.google.com/store/apps/details?id=x.org.server) and launching your favourite window manager into it.
 
 Firstly start the X server, secondly your linux distro. Then introduce the two and start some window manager:
