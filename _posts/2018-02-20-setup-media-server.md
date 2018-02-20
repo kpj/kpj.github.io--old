@@ -231,6 +231,7 @@ $ systemctl restart munin-node
 {% endhighlight %}
 
 Furthermore, arbitrary new plugins can be added by first copying them to `/usr/lib/munin/plugins/` and then linking with `/etc/munin/plugins/`.
+Note that they must be executable (`chmod a+x /usr/lib/munin/plugins/<plugin name>`).
 
 #### Common plugins
 
