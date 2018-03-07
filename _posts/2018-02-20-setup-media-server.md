@@ -36,6 +36,9 @@ $ systemctl enable --now minidlna.service
 
 It will now appear as a DLNA source on your respective rendering device.
 
+Due to "some" reason, DLNA does sometimes not synchronize new files (even after restarts).
+In order to fix this, simply delete `/var/cache/minidlna/files.db` and restart again.
+
 
 Setting up NFS
 --------------
