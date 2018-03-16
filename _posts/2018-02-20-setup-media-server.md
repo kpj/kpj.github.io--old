@@ -221,6 +221,12 @@ On the master-server, we have to add a configuration entry per node to `/etc/mun
 Without plugins, `munin` won't be reporting much.
 In the following, a few useful ones will be listed. More plugins can be found, e.g. by calling `munin-node-configure --suggest`.
 
+Each plugin can be installed by first copying them to `/usr/lib/munin/plugins/` and then linking with `/etc/munin/plugins/`.
+Note that they must be executable (`chmod a+x /usr/lib/munin/plugins/<plugin name>`):
+{% highlight bash %}
+$ ln -s /usr/lib/munin/plugins/<plugin name> /etc/munin/plugins/
+{% endhighlight %}
+
 As a general rule, each individual plugin can be tested in isolation using the following command:
 {% highlight bash %}
 $ munin-run <command name>
@@ -232,17 +238,12 @@ Remember, that a node needs to be restarted after changing its plugin configurat
 $ systemctl restart munin-node
 {% endhighlight %}
 
-Furthermore, arbitrary new plugins can be added by first copying them to `/usr/lib/munin/plugins/` and then linking with `/etc/munin/plugins/`.
-Note that they must be executable (`chmod a+x /usr/lib/munin/plugins/<plugin name>`).
-
 #### Common plugins
 
 The following are plugins providing generally useful statistics:
-
-{% highlight bash %}
-$ ln -s /usr/lib/munin/plugins/cpu /etc/munin/plugins/  # CPU-speed
-$ ln -s /usr/lib/munin/plugins/diskstats /etc/munin/plugins/  # various disk stats
-{% endhighlight %}
+* `cpu`: CPU-speed
+* `df`: disk space usage
+* `diskstats`: various disk stats
 
 #### SMART-plugin
 
