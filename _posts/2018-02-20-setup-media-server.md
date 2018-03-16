@@ -159,10 +159,9 @@ OnCalendar=*-*-* *:00/5:00
 WantedBy=multi-user.target
 {% endhighlight %}
 
-Before enabling them, we can try a manual test-run (remember that nothing will happen without enabling some plugins):
+Before enabling them, we can try a manual test-run by running `munin-cron` as the munin user (remember that nothing will happen without enabling some plugins):
 {% highlight bash %}
-$ su - munin --shell=/bin/bash
-$ munin-cron
+$ su - munin --shell=/bin/bash -c munin-cron
 {% endhighlight %}
 
 If we are sure that everything works, we can finally enable the timer:
