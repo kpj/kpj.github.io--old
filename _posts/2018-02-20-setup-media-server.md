@@ -284,3 +284,25 @@ Temperatures can then be monitored by adding the respective plugin:
 {% highlight bash %}
 $ ln -s /usr/lib/munin/plugins/sensors_ /etc/munin/plugins/sensors_temp
 {% endhighlight %}
+
+
+### Troubleshooting
+
+#### General tips
+A manual connection to a node is possible, and useful for debugging:
+{% highlight bash %}
+$ netcat <node ip> 4949
+{% endhighlight %}
+One can then enter e.g. one of the following commands:
+* `list`: list enabled plugins
+* `fetch <plugin name>`: check output of given plugin
+
+Furthermore, `munin-cron` can be run with the `--debug` option to show what is going on in more detail.
+
+More information can be found [here](http://guide.munin-monitoring.org/en/latest/tutorial/troubleshooting.html).
+
+#### Corrupted database
+The munin-databases can be found in `/var/lib/munin/<group name>`. Delete them to reset all data.
+
+#### Certain nodes cannot be reached.
+Check that their ip-address is set correctly in `/etc/munin/munin.conf`.
