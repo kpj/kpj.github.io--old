@@ -58,7 +58,7 @@ $ systemctl enable --now systemd-timesyncd
 
 The server is the device which has a physical (direct) connection to the hard-drive, which is assumed to be mounted in `/mnt/media/`.
 
-It is good practice to store all tenative NFS shares in a joint root (here: `/srv/nfs/`):
+It is good practice to store all tentative NFS shares in a joint root (here: `/srv/nfs/`):
 {% highlight bash %}
 $ mkdir -p /srv/nfs/media
 $ mount --bind /mnt/media/ /srv/nfs/media/
