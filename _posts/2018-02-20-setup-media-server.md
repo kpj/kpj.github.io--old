@@ -243,7 +243,11 @@ $ systemctl restart munin-node
 The following are plugins providing generally useful statistics:
 * `cpu`: CPU-speed
 * `df`: disk space usage
-* `diskstats`: various disk stats
+* `if_<interface>`: tx/rx rates on given interface
+* `processes`: overview of process numbers
+* `memory`: RAM usage
+
+My own custom plugins can be found [here](https://github.com/kpj/munin-plugins).
 
 #### SMART-plugin
 
