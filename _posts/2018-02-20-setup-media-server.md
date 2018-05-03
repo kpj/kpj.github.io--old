@@ -306,4 +306,5 @@ More information can be found [here](http://guide.munin-monitoring.org/en/latest
 The munin-databases can be found in `/var/lib/munin/<group name>`. Delete them to reset all data.
 
 #### Certain nodes cannot be reached.
-Check that their ip-address is set correctly in `/etc/munin/munin.conf`.
+Check that their ip-address is set correctly in the master's `/etc/munin/munin.conf`.
+Furthermore make sure that their own configuration (`/etc/munin/munin-node.conf`) allows the master to connect (`allow <master ip>`).
