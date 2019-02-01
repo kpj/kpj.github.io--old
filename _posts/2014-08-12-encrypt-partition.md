@@ -35,7 +35,7 @@ First sector (2048-15667166, default 2048):
 Last sector, +sectors or +size{K,M,G,T,P} (2048-15667166, default 15667166): +5M
 
 Command (m for help): n
-Partition number (2-128, default 2): 
+Partition number (2-128, default 2):
 First sector (12288-15667166, default 12288):
 Last sector, +sectors or +size{K,M,G,T,P} (12288-15667166, default 15667166):
 {% endhighlight %}
@@ -99,7 +99,7 @@ WARNING!
 This will overwrite data on /dev/sdb2 irrevocably.
 
 Are you sure? (Type uppercase yes): YES
-Enter passphrase: 
+Enter passphrase:
 Verify passphrase:
 Command successful.
 {% endhighlight %}
@@ -117,7 +117,7 @@ We can open our newly create drive which is backed by `/dev/sdb2` by executing
 
 {% highlight bash %}
 $ cryptsetup -v luksOpen /dev/sdb2 sticky
-Enter passphrase for /dev/sdb2: 
+Enter passphrase for /dev/sdb2:
 Key slot 0 unlocked.
 Command successful.
 {% endhighlight %}
@@ -129,7 +129,7 @@ Right now, we obviously cannot use it since there is no filesystem on it. Let's 
 $ mke2fs -L sticky -t ext4 /dev/mapper/sticky
 Creating filesystem with 1956347 4k blocks and 489600 inodes
 Filesystem UUID: 57d5effc-7d34-4866-aa5c-3a1a95c04f81
-Superblock backups stored on blocks: 
+Superblock backups stored on blocks:
     32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
 
 Allocating group tables: done                            
@@ -168,7 +168,7 @@ Normal Workflow
 ---------------
 To wrap everything up, this is the usual order of commands when using a device encrypted as described before
 
-{% highlight bash %} 
+{% highlight bash %}
 $ cryptsetup -v luksOpen <block device> <map name>
 $ mount /dev/mapper/<map name> <mount point>
 $ # do work...
